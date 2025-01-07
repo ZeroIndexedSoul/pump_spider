@@ -37,7 +37,7 @@ class PushUpdateCoinsRequests:
             try:
                 datetime.strptime(date_time_str, '%Y-%m-%d')
             except ValueError:
-                raise ValueError("Invalid date format. Expected 'YYYY-MM-DD'.")
+                raise ValueError("Invalid date format.  Expected 'YYYY-MM-DD'.")
         mints = self.redis_client.hkeys(f"pump_coins_data:{date_time_str}")
         return mints
 
