@@ -34,7 +34,6 @@ class PushUpdateCoinsRequests:
         if date_time_str is None:
             date_time_str = datetime.today().strftime('%Y-%m-%d')
         else:
-            # 验证date_time_str 是否是 '%Y-%m-%d'
             try:
                 datetime.strptime(date_time_str, '%Y-%m-%d')
             except ValueError:
